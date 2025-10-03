@@ -1,0 +1,249 @@
+/* Reset and base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background: #1F2937;
+  font-family: 'Roboto', sans-serif;
+  line-height: 1.6;
+  color: #333;
+}
+
+/* Shared container width */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+/* Navbar */
+header {
+  background: #1F2937;
+  color: #fff;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 0;
+}
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+.menu {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+}
+.menu li a {
+  text-decoration: none;
+  color: #fff;
+  transition: color 0.3s;
+}
+.menu li a:hover {
+  color: #f39c12;
+}
+
+/* Hero Section */
+.hero {
+  background: #1F2937;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 40vh;
+  gap: 2rem;
+}
+.hero-content {
+  flex: 1;
+}
+.hero-content h1 {
+  color: white;
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+.hero-content p {
+  color: white;
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+  max-width: 500px;
+}
+.btn {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  background: #f39c12;
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 5px;
+  transition: background 0.3s;
+}
+.btn:hover {
+  background: #d35400;
+}
+.hero-image {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+}
+.hero-image img {
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+  border-radius: 10px;
+}
+
+/* Other Sections */
+/* Other Sections (exclude Section 2 from flex centering) */
+section:not(.hero):not(.features) {
+  min-height: 100vh;
+  padding: 4rem 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+}
+
+#section2 { background: #bdc3c7; }
+#section3 { background: #95a5a6; }
+#section4 { background: #7f8c8d; color: #fff; }
+
+/* Section 2 (Features) */
+.features {
+  background: #fff;
+  padding: 4rem 2rem;
+  text-align: center;
+  min-height: 50vh;       
+  display: flex;          
+  flex-direction: column; 
+  justify-content: center;
+}
+
+
+.features h2 {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+}
+
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.feature-box {
+  background: #fff;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.feature-box h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.feature-box p {
+  font-size: 1rem;
+  color: #555;
+}
+
+/* Section 3 (Quote) */
+.quote-section {
+  background: #95a5a6;
+  min-height: 50vh !important;  /* shorter height */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+}
+
+.quote-container {
+  max-width: 900px;
+  text-align: left;  /* align text left */
+  color: #fff;
+}
+
+.quote-container blockquote {
+  font-size: 2.2rem;   /* larger text */
+  font-style: italic;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
+.quote-container cite {
+  display: block;
+  font-size: 1.2rem;
+  font-style: normal;
+  font-weight: bold;
+  text-align: right; /* signature style */
+  color: #eee;
+}
+
+/* Section 4 (CTA) */
+.cta-section {
+  background: #7f8c8d;
+  padding: 4rem 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  min-height: auto !important;   /* override global 100vh */
+  height: 40vh;                  /* or whatever size you want */
+}
+
+
+.cta-box {
+  background: #2c3e50;   /* inner box background */
+  color: #fff;
+  padding: 2rem 3rem;
+  border-radius: 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+  max-width: 1000px;
+  width: 100%;
+  box-shadow: 0 6px 12px rgba(0,0,0,0.2);
+}
+
+.cta-text h2 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.cta-text p {
+  font-size: 1.2rem;
+  color: #ddd;
+}
+
+.cta-button .btn {
+  padding: 0.75rem 2rem;
+  background: #f39c12;
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 6px;
+  transition: background 0.3s;
+  white-space: nowrap;
+}
+
+.cta-button .btn:hover {
+  background: #d35400;
+}
+
+/* Footer */
+footer {
+  width: 100%;
+  background: #222;
+  color: #aaa;
+  text-align: center;
+  padding: 2% 0; /* proportional height */
+}
